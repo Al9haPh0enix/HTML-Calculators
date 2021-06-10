@@ -113,6 +113,116 @@ window.onload = function(){
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
         }
+
+        else if(window.type == "DIVIDE"){
+            document.getElementById("inp2").style.display = 'inline';
+            document.getElementById("inp22").style.display = 'inline';
+            document.getElementById("inp3").style.display = 'none';
+            document.getElementById("inp33").style.display = 'none';
+    
+            document.getElementById("inp11").innerHTML = "Division Number 1:";
+            document.getElementById("inp22").innerText = "Division Number 2:";
+
+            submit.onclick = function(){
+            var out = document.getElementById("inp1").value / document.getElementById("inp2").value;
+
+                document.getElementById("123").innerHTML = "Output: " + out;
+            }
+        }
+
+        else if(window.type == "ADD"){
+            document.getElementById("inp2").style.display = 'inline';
+            document.getElementById("inp22").style.display = 'inline';
+            document.getElementById("inp3").style.display = 'none';
+            document.getElementById("inp33").style.display = 'none';
+    
+            document.getElementById("inp11").innerHTML = "Addition Number 1:";
+            document.getElementById("inp22").innerText = "Addition Number 2:";
+
+            submit.onclick = function(){
+            var out = +document.getElementById("inp1").value + +document.getElementById("inp2").value;
+
+                document.getElementById("123").innerHTML = "Output: " + out;
+            }
+        }
+
+        else if(window.type == "SUBTRACT"){
+            document.getElementById("inp2").style.display = 'inline';
+            document.getElementById("inp22").style.display = 'inline';
+            document.getElementById("inp3").style.display = 'none';
+            document.getElementById("inp33").style.display = 'none';
+    
+            document.getElementById("inp11").innerHTML = "Subtraction Number 1:";
+            document.getElementById("inp22").innerText = "Subtraction Number 2:";
+
+            submit.onclick = function(){
+            var out = document.getElementById("inp1").value - document.getElementById("inp2").value;
+
+                document.getElementById("123").innerHTML = "Output: " + out;
+            }
+        }
+
+        else if(window.type == "POWER"){
+            document.getElementById("inp2").style.display = 'inline';
+            document.getElementById("inp22").style.display = 'inline';
+            document.getElementById("inp3").style.display = 'none';
+            document.getElementById("inp33").style.display = 'none';
+    
+            document.getElementById("inp11").innerHTML = "Exponent Number 1:";
+            document.getElementById("inp22").innerText = "Exponent Number 2:";
+
+            submit.onclick = function(){
+            var out = math.pow(document.getElementById("inp1").value, document.getElementById("inp2").value);
+
+                document.getElementById("123").innerHTML = "Output: " + out;
+            }
+        }
+
+        else if(window.type == "MODULUS"){
+            document.getElementById("inp2").style.display = 'inline';
+            document.getElementById("inp22").style.display = 'inline';
+            document.getElementById("inp3").style.display = 'none';
+            document.getElementById("inp33").style.display = 'none';
+    
+            document.getElementById("inp11").innerHTML = "Modulus Number 1:";
+            document.getElementById("inp22").innerText = "Modulus Number 2:";
+
+            submit.onclick = function(){
+            var out = document.getElementById("inp1").value % document.getElementById("inp2").value;
+
+                document.getElementById("123").innerHTML = "Output: " + out;
+            }
+        }
+
+        else if(window.type == "SQROOT"){
+            document.getElementById("inp2").style.display = 'none';
+            document.getElementById("inp22").style.display = 'none';
+            document.getElementById("inp3").style.display = 'none';
+            document.getElementById("inp33").style.display = 'none';
+    
+            document.getElementById("inp11").innerHTML = "Square Root Number:";
+
+            submit.onclick = function(){
+            var out = Math.sqrt(document.getElementById("inp1").value);
+
+                document.getElementById("123").innerHTML = "Output: " + out;
+            }
+        }
+
+        else if(window.type == "CUBEROOT"){
+            document.getElementById("inp2").style.display = 'none';
+            document.getElementById("inp22").style.display = 'none';
+            document.getElementById("inp3").style.display = 'none';
+            document.getElementById("inp33").style.display = 'none';
+    
+            document.getElementById("inp11").innerHTML = "Cube Root Number:";
+
+            submit.onclick = function(){
+            var out = Math.cbrt(document.getElementById("inp1").value);
+
+                document.getElementById("123").innerHTML = "Output: " + out;
+            }
+        }
     }
 
     setInterval(updateType, 100);
