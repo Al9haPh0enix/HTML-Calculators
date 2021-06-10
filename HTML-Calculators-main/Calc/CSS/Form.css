@@ -1,0 +1,31 @@
+.form{
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inp{
+    background-color: lightcoral;
+    display: none;
+}
+
+.h {
+    font-size: 25px;
+    text-align: center;
+    font-family: Arial;
+}
+
+.background{
+    background-image: radial-gradient(circle, crimson, red);
+}
+
+.submit{
+    font-size:20px;
+    background-color: lightcoral;
+}
+
+.Something{
+    font-size:30px;
+    display: none;
+}
