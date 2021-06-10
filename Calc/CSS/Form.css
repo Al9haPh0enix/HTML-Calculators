@@ -17,7 +17,7 @@
 }
 
 .background{
-    background-color: crimson;
+    background-image: radial-gradient(circle, crimson, red);
 }
 
 .submit{

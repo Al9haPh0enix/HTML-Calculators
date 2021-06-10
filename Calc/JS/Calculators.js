@@ -84,11 +84,34 @@ window.onload = function(){
             document.getElementById("inp3").style.display = 'inline';
             document.getElementById("inp33").style.display = 'inline';
     
-            document.getElementById("inp11").innerHTML = "It's";
-            document.getElementById("inp22").innerText = "4:24";
-            document.getElementById("inp33").innerText = "AM";
+            document.getElementById("inp11").innerHTML = "Length:";
+            document.getElementById("inp22").innerText = "Width:";
+            document.getElementById("inp33").innerText = "Height:";
+
+            submit.onclick = function(){
+                l = document.getElementById("inp1").value;
+                w = document.getElementById("inp2").value;
+                h = document.getElementById("inp3").value;
+                var out = (l * w * h) / 2
+
+                document.getElementById("123").innerHTML = "Output: " + out;
+            }
+        }
+
+        else if(window.type == "MULTIPLY"){
+            document.getElementById("inp2").style.display = 'inline';
+            document.getElementById("inp22").style.display = 'inline';
+            document.getElementById("inp3").style.display = 'none';
+            document.getElementById("inp33").style.display = 'none';
     
-            document.getElementById("123").innerHTML = "Output: " + "Send help.";
+            document.getElementById("inp11").innerHTML = "Multiplication Number 1:";
+            document.getElementById("inp22").innerText = "Multiplication Number 2:";
+
+            submit.onclick = function(){
+            var out = document.getElementById("inp1").value * document.getElementById("inp2").value;
+
+                document.getElementById("123").innerHTML = "Output: " + out;
+            }
         }
     }
 
