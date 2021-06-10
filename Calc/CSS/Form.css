@@ -6,7 +6,7 @@
 }
 
 .inp{
-    background-color: lightcoral;
+    background-color: cyan;
     display: none;
 }
 
@@ -16,16 +16,15 @@
     font-family: Arial;
 }
 
-.background{
-    background-image: radial-gradient(circle, crimson, red);
-}
-
 .submit{
     font-size:20px;
-    background-color: lightcoral;
+    background-color: cyan;
 }
 
 .Something{
     font-size:30px;
     display: none;
+}
+.thirtyl{
+    background-color: darkblue;
 }

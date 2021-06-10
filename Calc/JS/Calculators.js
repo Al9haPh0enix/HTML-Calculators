@@ -5,9 +5,18 @@ window.onload = function(){
     document.getElementById("inp1").style.display = 'inline';
     document.getElementById("inp11").style.display = 'inline';
     document.getElementById("CT").style.display = 'inline';
-    
 
-    function updateType(){
+    function componentToHex(c) {
+        var hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+    
+    let r = 0;
+    let g = 100;
+    let b = 200;
+    let goingBack = false;
+
+    function Update(){
         e = document.getElementById("CT");
         window.type = e.options[e.selectedIndex].value;
 
@@ -28,7 +37,7 @@ window.onload = function(){
     
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "VOAC"){
 
@@ -50,7 +59,7 @@ window.onload = function(){
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "VOAP"){
 
@@ -76,7 +85,7 @@ window.onload = function(){
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "VOATP"){
             document.getElementById("inp2").style.display = 'inline';
@@ -96,7 +105,7 @@ window.onload = function(){
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "MULTIPLY"){
             document.getElementById("inp2").style.display = 'inline';
@@ -112,7 +121,7 @@ window.onload = function(){
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "DIVIDE"){
             document.getElementById("inp2").style.display = 'inline';
@@ -128,7 +137,7 @@ window.onload = function(){
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "ADD"){
             document.getElementById("inp2").style.display = 'inline';
@@ -144,7 +153,7 @@ window.onload = function(){
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "SUBTRACT"){
             document.getElementById("inp2").style.display = 'inline';
@@ -160,7 +169,7 @@ window.onload = function(){
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "POWER"){
             document.getElementById("inp2").style.display = 'inline';
@@ -172,11 +181,11 @@ window.onload = function(){
             document.getElementById("inp22").innerText = "Exponent Number 2:";
 
             submit.onclick = function(){
-            var out = math.pow(document.getElementById("inp1").value, document.getElementById("inp2").value);
+                var out = Math.pow(document.getElementById("inp1").value, document.getElementById("inp2").value);
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "MODULUS"){
             document.getElementById("inp2").style.display = 'inline';
@@ -188,11 +197,11 @@ window.onload = function(){
             document.getElementById("inp22").innerText = "Modulus Number 2:";
 
             submit.onclick = function(){
-            var out = document.getElementById("inp1").value % document.getElementById("inp2").value;
+                var out = document.getElementById("inp1").value % document.getElementById("inp2").value;
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "SQROOT"){
             document.getElementById("inp2").style.display = 'none';
@@ -207,7 +216,7 @@ window.onload = function(){
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
 
         else if(window.type == "CUBEROOT"){
             document.getElementById("inp2").style.display = 'none';
@@ -222,8 +231,10 @@ window.onload = function(){
 
                 document.getElementById("123").innerHTML = "Output: " + out;
             }
-        }
+        } //Working
+
+        document.body.style.backgroundColor = "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
     }
 
-    setInterval(updateType, 100);
+    setInterval(Update, 100);
 }
